@@ -15,6 +15,7 @@ const Register = () => {
         createUser(email, password)
         .then(result =>{
             console.log(result.user)
+            e.target.reset()
         })
         .catch(error =>{
             console.log(error)
@@ -51,7 +52,7 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Register</button>
                         </div>
                     </form>
                     <p>Already have an account? Please<Link to='/login'><button className="btn btn-link">Login</button></Link></p>
